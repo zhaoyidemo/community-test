@@ -1,0 +1,94 @@
+name: 📜 AIP提案
+description: 提交一个正式的改进提案（需要理事会投票）
+title: "[AIP-草稿] "
+labels: ["AIP", "待审议"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 提交AIP提案
+        
+        这是正式的改进提案，会提交理事会审议。
+        如果只是想法讨论，请使用"想法提交"模板。
+  
+  - type: input
+    id: title
+    attributes:
+      label: 📋 提案标题
+      description: 简短有力的标题
+      placeholder: 例如：建立数据最小化原则
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: type
+    attributes:
+      label: 🏷️ 提案类型
+      description: 选择提案类型
+      options:
+        - 产品功能
+        - 隐私安全
+        - 伦理标准
+        - 社区治理
+        - 其他
+    validations:
+      required: true
+  
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 摘要
+      description: 用2-3句话说清楚这个提案
+      placeholder: 这个提案建议...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 🎯 动机
+      description: 为什么需要这个提案？解决什么问题？
+      placeholder: 当前的问题是...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: specification
+    attributes:
+      label: 🔧 详细方案
+      description: 具体怎么实施？
+      placeholder: 我们建议采取以下措施...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: impact
+    attributes:
+      label: 🎯 影响范围
+      description: 会影响哪些人或功能？
+      placeholder: 这会影响...
+    validations:
+      required: false
+  
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 📅 实施计划
+      description: 分几个阶段？需要多久？
+      placeholder: |
+        阶段1：...
+        阶段2：...
+    validations:
+      required: false
+  
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ 提交前确认
+      options:
+        - label: 我已经搜索过，没有重复的提案
+          required: true
+        - label: 我理解这需要理事会投票决定
+          required: true
+        - label: 我愿意回答问题和补充细节
+          required: true
