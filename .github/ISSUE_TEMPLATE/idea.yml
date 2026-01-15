@@ -1,0 +1,73 @@
+name: 💡 想法提交
+description: 提交一个新想法或建议
+title: "[想法] "
+labels: ["想法"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你提交想法！请填写下面的信息。
+  
+  - type: textarea
+    id: idea
+    attributes:
+      label: 💡 你的想法是什么？
+      description: 简单描述你的想法
+      placeholder: 我觉得可以...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: why
+    attributes:
+      label: 🤔 为什么这个想法很重要？
+      description: 说明这个想法能解决什么问题
+      placeholder: 因为...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 📝 有什么具体建议吗？
+      description: 如果有初步方案，可以写在这里
+      placeholder: 可以这样做...
+    validations:
+      required: false
+```
+
+**5. 滚到底部：**
+```
+Commit message: 创建想法提交模板
+```
+
+**6. 点击 `Commit changes`**
+
+---
+
+## ✅ 测试模板
+
+**1. 回到 Issues 页面**
+
+**2. 点击 `New issue`**
+
+**你应该看到：**
+- 💡 想法提交
+- 一个 `Get started` 按钮
+
+**3. 点击 `Get started`**
+
+**看到表单了吗？** 应该有：
+- 你的想法是什么？（必填）
+- 为什么重要？（必填）
+- 具体建议？（选填）
+
+---
+
+## 🎯 再创建第二个模板（可选）
+
+**用同样方法创建：**
+
+**文件路径：**
+```
+.github/ISSUE_TEMPLATE/proposal.yml
